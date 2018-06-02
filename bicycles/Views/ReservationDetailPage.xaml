@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="bicycles.Views.ReservationDetailPage">
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="{Binding Reservation.Id}" FontSize="Medium" />
+        <Label Text="{Binding Reservation.User.Name}" FontSize="Medium" />
+        <Label Text="{Binding Reservation.Bicycle.Name}" FontSize="Medium" />
+        <Label Text="{Binding Reservation.Price, StringFormat='Cena za rezerwację: {0:N} zł'}" FontSize="Medium" />
+        <Image x:Name="backgroundImage" Source="{Binding Reservation.Bicycle.Picture}"/>
+    </StackLayout>
+</ContentPage>

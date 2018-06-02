@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="bicycles.BicycleDetailPage" Title="{Binding Title}">
+	<StackLayout Spacing="20" Padding="15">
+		<Label Text="{Binding Bicycle.Name}" FontSize="Medium" />
+        <Label Text="{Binding Bicycle.Price, StringFormat='Cena za wypożyczenie: {0:N} zł'}" FontSize="Medium" />
+        <Image x:Name="backgroundImage" Source="{Binding Bicycle.Picture}"/>
+        <Button x:Name="saveButton" Text="Zapisz obrazek" TextColor="White" BackgroundColor="#77D065" Command="{Binding SaveImage}" VerticalOptions="End"/>        
+	</StackLayout>
+</ContentPage>

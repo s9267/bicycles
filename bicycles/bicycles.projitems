@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{34BD1204-817C-48EC-A579-AA2927828DBE}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>bicycles</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Bicycle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\BicycleDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BicycleDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BicyclesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BicycleDetailPage.xaml.cs">
+      <DependentUpon>BicycleDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BicyclesPage.xaml.cs">
+      <DependentUpon>BicyclesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NewBicyclePage.xaml.cs">
+      <DependentUpon>NewBicyclePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UsersViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UserServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ClientsPage.xaml.cs">
+      <DependentUpon>ClientsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Reservation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ReservationDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ReservationsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NewReservationPage.xaml.cs">
+      <DependentUpon>NewReservationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CreateReservationViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ReservationsPage.xaml.cs">
+      <DependentUpon>ReservationsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ReservationDetailsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ReservationDetailPage.xaml.cs">
+      <DependentUpon>ReservationDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DownloadImageServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ISaveImageServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\BicycleValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\BaseValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\Behaviors\NameValidationBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\Behaviors\BaseValidationBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validators\ReservationValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CreateBicycleViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BicycleDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BicyclesPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewBicyclePage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ClientsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewReservationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ReservationsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ReservationDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Validators\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Validators\Behaviors\" />
+  </ItemGroup>
+</Project>

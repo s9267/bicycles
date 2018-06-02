@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="bicycles.Views.NewReservationPage" >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Zapisz" Command="{Binding SaveReservationCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Klient" FontSize="Medium" />
+            <Picker Title="Wybierz klienta"    
+            ItemsSource="{Binding Users}"
+            ItemDisplayBinding="{Binding Name}"
+            SelectedItem="{Binding Reservation.User}" />
+            <Label Text="Wybierz rower" FontSize="Medium" />
+            <Picker Title="Wybierz rower"  
+            ItemsSource="{Binding Bicycles}"
+            ItemDisplayBinding="{Binding Name}"
+            SelectedItem="{Binding Reservation.Bicycle}" />
+            <Label Text="Ilość dni" FontSize="Medium" />
+            <Entry Text="{Binding Reservation.Days}" FontSize="Small" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
